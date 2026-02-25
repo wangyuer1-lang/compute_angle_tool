@@ -1,15 +1,24 @@
-## Ueda Lab CLIJ2 Plugin Template
+## Geometry Points Tools
 
-This repository is a clean template for Ueda Lab members to create new CLIJ2 plugins.
+This repository provides Fiji tools for standardized geometry point workflows.
+It includes point table creation, ROI Manager import, point overlay display, line/plane fitting, and line-plane angle computation.
+The existing `AddScalar` example remains unchanged.
 
-It ships with a working add-scalar example operation.
-The example behavior is intentionally unchanged from the template baseline.
-Only the `org.uedalab.clijplugin` package tree is kept in this template.
-
-Template example files:
+Included files:
 
 - [AddScalar.java](src/main/java/org/uedalab/clijplugin/AddScalar.java)
 - [add_scalar.cl](src/main/java/org/uedalab/clijplugin/add_scalar.cl)
+- `Plugins > Geometry Points > geometry points > create point table...` creates a standardized point table (`id,x,y,z,role`).
+- `Plugins > Geometry Points > geometry points > append points from roi manager...` appends points from ROI Manager into the standardized table; recommended workflow: Multi-point tool -> ROI Manager -> append to table.
+- `Plugins > Geometry Points > geometry points > show point table overlay...` visualizes the standardized point table on the active image.
+- `Plugins > Geometry Points > geometry fit > fit line from point table...` outputs line centroid/direction/RMS and can draw a projected overlay line.
+- `Plugins > Geometry Points > geometry fit > fit plane from point table...` outputs centroid/normal/RMS/max and can draw a projected normal overlay line.
+- `Plugins > Geometry Points > geometry fit > compute line-plane angle...` reads fit_line and fit_plane tables and outputs the angle.
+
+## UI
+
+- `Plugins > Geometry Points > geometry ui > open geometry points ui...` opens a DM3D-style control window with embedded image view, point list, fitting panel, and model list.
+- Workflow: bind image -> left-click image to add points -> run fitting (line/plane) -> select models/points to highlight -> compute line-plane angle.
 
 ## How to rename for a new plugin
 

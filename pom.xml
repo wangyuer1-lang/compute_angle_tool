@@ -12,14 +12,13 @@
         <relativePath />
     </parent>
 
-    <groupId>org.uedalab</groupId>
-    <artifactId>clij2-template-uedalab</artifactId>
-    <version>0.1.0</version>
+    <groupId>com.wangyuer1</groupId>
+    <artifactId>geometry-points-fiji</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
   
-    <name>Ueda Lab CLIJ2 Plugin Template</name>
-    <description>Template repository for developing CLIJ2 plugins at Ueda Lab with an add-scalar example.</description>
- main
-    <url>https://github.com/wangyuer1-lang/ueda-lab-clij2-template</url>
+    <name>Geometry Points Tools</name>
+    <description>Fiji tools for standardized point tables, ROI Manager import, point overlay visualization, 3D line/plane fitting, and line-plane angle computation.</description>
+    <url>https://github.com/wangyuer1-lang/MY_NEW_PROJECT</url>
     <inceptionYear>2026</inceptionYear>
     <organization>
         <name>Ueda Lab</name>
@@ -86,6 +85,13 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <proc>full</proc>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
